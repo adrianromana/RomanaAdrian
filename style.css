@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Set the background to black */
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.2); /* Lower opacity for glass effect */
+    padding: 20px 30px;
+    border-radius: 12px;
+    z-index: 1; /* Ensure the modal is above other elements */
+    backdrop-filter: blur(30px) saturate(180%); /* Apply a stronger blur and saturation for the glass-like effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add a more intense shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border to enhance glass look */
+}
+
+input[type="text"], input[type="number"] {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft white border for input fields */
+    border-radius: 4px;
+    width: calc(100% - 24px); 
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent input background */
+    color: white; /* Input text color */
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+}
+
+button {
+    margin: 10px 5px; /* Add spacing between buttons */
+    padding: 12px;
+    border-radius: 6px;
+    width: calc(100% - 22px); /* Make button size uniform */
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+/* Styling for the submit button */
+button.submitBtn {
+    background-color: #ebd3d3; /* Dark red color */
+    color: rgb(122, 0, 0);
+}
+
+button.submitBtn:hover {
+    background-color: #ff0000; /* Bright red on hover */
+}
+
+/* Styling for the download button */
+button.download {
+    background-color: #d6e7d6; /* Dark green color */
+    color: rgba(255, 255, 255, 0.479);
+}
+
+button.download:hover {
+    background-color: #00a000; /* Bright green on hover */
+}
+
+/* Add focus style for accessibility */
+input:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Glow effect for focused input/button */
+}
